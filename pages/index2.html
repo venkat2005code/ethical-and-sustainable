@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket - Digital Solutions for Sustainability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+<text y='50' font-size='50'>🌱</text>
+</svg>">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#059669',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- NAVBAR (Same as index.html) -->
+    <nav class="main-navbar fixed w-full top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fas fa-leaf text-3xl text-green-500"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">EcoMarket</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center gap-1">
+                    <div class="dropdown relative">
+                        <button class="dropdown-trigger nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition flex items-center">
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down ms-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700">
+                            <a href="index.html" class="block px-4 py-3 hover:bg-green-50 dark:hover:bg-gray-700 transition rounded-t-lg">
+                                <i class="fas fa-home me-2 text-green-500"></i>Home 1
+                            </a>
+                            <a href="index2.html" class="block px-4 py-3 hover:bg-green-50 dark:hover:bg-gray-700 transition rounded-b-lg">
+                                <i class="fas fa-home me-2 text-green-500"></i>Home 2
+                            </a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">About</a>
+                    <a href="services.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Services</a>
+                    <a href="shop.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Shop</a>
+                    <a href="blog.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Blog</a>
+                    <a href="pricing.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Pricing</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="dashboard.html" class="px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition flex items-center">
+                        <i class="fas fa-chart-line me-2"></i>Dashboard
+                    </a>
+                    <button id="rtlToggle" class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition" title="Toggle RTL">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="login.html" class="px-6 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition">
+                        Login
+                    </a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="mobile-menu lg:hidden">
+                <div class="py-4 space-y-2">
+                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Home 1</a>
+                    <a href="index2.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Home 2</a>
+                    <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">About</a>
+                    <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Services</a>
+                    <a href="shop.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Shop</a>
+                    <a href="blog.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Blog</a>
+                    <a href="pricing.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Pricing</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Contact</a>
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
+                        <a href="dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">Dashboard</a>
+                        <div class="flex items-center gap-2 px-4 py-2">
+                            <button id="rtlToggleMobile" class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">
+                                <i class="fas fa-globe"></i> RTL
+                            </button>
+                            <button id="darkModeToggleMobile" class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition">
+                                <i class="fas fa-moon"></i> Theme
+                            </button>
+                        </div>
+                        <a href="login.html" class="block px-4 py-2 mt-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg text-center">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - SaaS Style -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-purple-600 via-blue-600 to-green-500">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Empower Your Sustainable Business
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8">
+                        All-in-one platform for eco-conscious businesses. Track impact, manage operations, and grow sustainably with our powerful tools.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="register.html" class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-xl transform hover:-translate-y-1 transition font-semibold">
+                            Start Free Trial
+                        </a>
+                        <a href="#features" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition font-semibold">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="relative animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=500&fit=crop" alt="Dashboard" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT LOGOS -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-8">Trusted by leading sustainable brands</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60">
+                <div class="text-2xl font-bold text-gray-400">GreenTech</div>
+                <div class="text-2xl font-bold text-gray-400">EcoLife</div>
+                <div class="text-2xl font-bold text-gray-400">SustainCo</div>
+                <div class="text-2xl font-bold text-gray-400">EarthFirst</div>
+                <div class="text-2xl font-bold text-gray-400">PurePlanet</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE HIGHLIGHTS -->
+    <section id="features" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Powerful Features for Modern Businesses</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Everything you need to run a successful sustainable business</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl bg-gradient-to-br from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 card-hover">
+                    <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Impact Analytics</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Track your environmental impact with real-time dashboards and detailed reports.</p>
+                </div>
+                
+                <div class="p-8 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 card-hover">
+                    <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Team Collaboration</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Work together seamlessly with built-in project management and communication tools.</p>
+                </div>
+                
+                <div class="p-8 rounded-xl bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 card-hover">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Certification Management</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Manage sustainability certifications and compliance documentation easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES / PORTFOLIO -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Success Stories</h2>
+                <p class="text-gray-600 dark:text-gray-400">See how businesses are thriving with our platform</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Case Study" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">GreenTech Solutions</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Reduced carbon footprint by 45% while increasing revenue by 60% in just 6 months.</p>
+                        <a href="#" class="text-green-600 font-semibold hover:underline">Read Case Study <i class="fas fa-circle opacity-60" style="font-size:6px;"></i> <i class="fas fa-arrow-right ms-2 text-xs"></i></a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop" alt="Case Study" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">EcoRetail Chain</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Streamlined supply chain operations and achieved B-Corp certification within one year.</p>
+                        <a href="#" class="text-green-600 font-semibold hover:underline">Read Case Study <i class="fas fa-circle opacity-60" style="font-size:6px;"></i> <i class="fas fa-arrow-right ms-2 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT/SERVICE SHOWCASE -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Solutions</h2>
+                <p class="text-gray-600 dark:text-gray-400">Comprehensive tools for every aspect of your business</p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Feature Row 1 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900 rounded-full mb-4">
+                            <i class="fas fa-leaf text-green-600 dark:text-green-400 me-2"></i>
+                            <span class="text-green-700 dark:text-green-300 font-medium">Sustainability Tracker</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Monitor Your Environmental Impact</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Real-time tracking of carbon emissions, waste reduction, water usage, and energy consumption across all operations.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 me-3"></i>Automated data collection</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 me-3"></i>Custom reporting dashboards</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 me-3"></i>Industry benchmarking</li>
+                        </ul>
+                        <a href="services.html" class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition inline-block">Learn More</a>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Feature" class="rounded-xl shadow-xl">
+                    </div>
+                </div>
+                
+                <!-- Feature Row 2 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Feature" class="rounded-xl shadow-xl">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900 rounded-full mb-4">
+                            <i class="fas fa-store text-blue-600 dark:text-blue-400 me-2"></i>
+                            <span class="text-blue-700 dark:text-blue-300 font-medium">Marketplace Integration</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Sell on Multiple Platforms</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Seamlessly integrate with major marketplaces and manage all your sales channels from one dashboard.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 me-3"></i>Multi-channel inventory sync</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 me-3"></i>Automated order fulfillment</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 me-3"></i>Unified analytics</li>
+                        </ul>
+                        <a href="services.html" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition inline-block">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Join thousands of businesses making sustainability profitable</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="register.html" class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-xl transform hover:-translate-y-1 transition font-semibold">
+                    Start Free Trial
+                </a>
+                <a href="contact.html" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition font-semibold">
+                    Schedule Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as index.html) -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-500"></i>
+                        <span class="text-2xl font-bold">EcoMarket</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Your trusted marketplace for ethical and sustainable products. Making the world a better place, one purchase at a time.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-green-500 transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-green-500 transition">Services</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-green-500 transition">Shop</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-green-500 transition">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-green-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Customer Service</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new products and eco-tips</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-500 text-white">
+                        <button type="submit" class="w-full px-4 py-3 bg-green-500 rounded-lg hover:bg-green-600 transition font-semibold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 EcoMarket. All rights reserved. Made with <i class="fas fa-heart text-green-500"></i> for the planet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+
+
